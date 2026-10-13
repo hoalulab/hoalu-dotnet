@@ -4,11 +4,11 @@ lefthook = "2.1.10"
 
 [tasks.build]
 description = "Build entire solution"
-run = "dotnet build VNBrokers.sln"
+run = "dotnet build Hoalu.sln"
 
 [tasks.build-project]
 description = "Build a single project"
-run = "dotnet build src/VNBrokers/VNBrokers.csproj"
+run = "dotnet build src/Hoalu/Hoalu.csproj"
 
 [tasks.build-release]
 description = "Build with Release configuration"
@@ -16,7 +16,7 @@ run = "dotnet build -c Release"
 
 [tasks.publish]
 description = "Publish project to ./publish"
-run = "dotnet publish src/VNBrokers/VNBrokers.csproj -c Release -o ./publish"
+run = "dotnet publish src/Hoalu/Hoalu.csproj -c Release -o ./publish"
 
 [tasks.restore]
 description = "Restore NuGet packages"
@@ -34,8 +34,8 @@ depends = ["clean", "restore", "build-release"]
 description = "Sonar Scanner (set SONAR_HOST_URL, SONAR_TOKEN; optionally SONAR_PROJECT_KEY, SONAR_ORGANIZATION)"
 run = """
 dotnet sonarscanner begin \
-  /k:"${SONAR_PROJECT_KEY:-vnbrokers_vnbrokers-dotnet}" \
-  /o:"${SONAR_ORGANIZATION:-vnbrokers}" \
+  /k:"${SONAR_PROJECT_KEY:-hoalulab_hoalu-dotnet}" \
+  /o:"${SONAR_ORGANIZATION:-hoalu}" \
   /d:sonar.host.url="${SONAR_HOST_URL:-}" \
   /d:sonar.token="$SONAR_TOKEN" \
   /d:sonar.exclusions=tests/**,examples/** \

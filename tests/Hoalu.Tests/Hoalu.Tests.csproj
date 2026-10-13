@@ -16,6 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\VNBrokers\VNBrokers.csproj" />
+    <ProjectReference Include="..\..\src\Hoalu\Hoalu.csproj" />
   </ItemGroup>
 </Project>

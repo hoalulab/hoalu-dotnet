@@ -1,4 +1,4 @@
-# VNBrokers SDK for .NET
+# Hoalu SDK for .NET
 
 ## Disclaimer
 
