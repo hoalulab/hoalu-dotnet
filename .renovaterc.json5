@@ -1,4 +1,12 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: ["local>hoalulab/renovate-config"],
+  packageRules: [
+    {
+      description: "Keep the .NET SDK version synchronized between global.json and mise",
+      matchManagers: ["nuget", "mise"],
+      matchDepNames: ["dotnet-sdk", "dotnet"],
+      groupName: "dotnet-sdk",
+    },
+  ],
 }

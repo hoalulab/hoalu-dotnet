@@ -1,5 +1,5 @@
 [tools]
-dotnet = "8"
+dotnet = "8.0.427"
 lefthook = "2.1.16"
 
 [tasks.build]
