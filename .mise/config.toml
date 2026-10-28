@@ -31,11 +31,11 @@ description = "Clean → Restore → Build Release"
 depends = ["clean", "restore", "build-release"]
 
 [tasks.sonar-start]
-description = "Sonar Scanner (set SONAR_HOST_URL, SONAR_TOKEN; optionally SONAR_PROJECT_KEY, SONAR_ORGANIZATION)"
+description = "Sonar Scanner (set SONAR_HOST_URL, SONAR_TOKEN; optionally SONAR_PROJECT_KEY, default SONAR_ORGANIZATION=hoalulab)"
 run = """
 dotnet sonarscanner begin \
   /k:"${SONAR_PROJECT_KEY:-hoalulab_hoalu-dotnet}" \
-  /o:"${SONAR_ORGANIZATION:-hoalu}" \
+  /o:"${SONAR_ORGANIZATION:-hoalulab}" \
   /d:sonar.host.url="${SONAR_HOST_URL:-}" \
   /d:sonar.token="$SONAR_TOKEN" \
   /d:sonar.exclusions=tests/**,examples/** \
