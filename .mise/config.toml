@@ -1,6 +1,6 @@
 [tools]
 dotnet = "8.0.427"
-lefthook = "2.1.16"
+lefthook = "2.2.2"
 
 [tasks.build]
 description = "Build entire solution"
